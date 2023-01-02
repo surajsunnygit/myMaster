@@ -1,0 +1,38 @@
+package convertJavaObjectToXMLactual.convertJavaObjectToXMLactual;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+	public static void main(String[] args) {
+		System.out.println("hello");
+	}
+}
+
+@XmlRootElement
+class Car {
+	
+	@XmlElement
+	public String carName;
+	
+	@XmlElement
+	public String carBrand;
+
+	public Car(String carName, String carBrand) {
+		super();
+		this.carName = carName;
+		this.carBrand = carBrand;
+	}
+
+	@Override
+	public String toString() {
+		return "Car [carName=" + carName + ", carBrand=" + carBrand + "]";
+	}
+	
+	
+}

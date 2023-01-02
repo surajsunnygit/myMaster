@@ -1,0 +1,60 @@
+package convertJavaObjectToXMLactual.convertJavaObjectToXMLactual;
+
+import java.io.File;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+import jakarta.xml.bind.Marshaller;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+	public static void main(String[] args) throws JAXBException {
+		System.out.println("hello");
+		
+		Car car = new Car("audi", "great");
+		 // Create JAXB context and initializing Marshaller
+        JAXBContext context = JAXBContext.newInstance(Car.class);
+        javax.xml.bind.Marshaller marshaller = context.createMarshaller();
+
+        // For formatted output of xml
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+
+        // Create xml file object
+        File XMLfile = new File("C:\\Users\\SURAJ\\Desktop\\carprogram.xml");
+
+        // Java object to XML file
+        marshaller.marshal(car, XMLfile);
+        // Print to console
+        marshaller.marshal(car, System.out);
+	}
+}
+
+@XmlRootElement
+class Car {
+	
+	@XmlElement
+	public String carName;
+	
+	@XmlElement
+	public String carBrand;
+
+	public Car(String carName, String carBrand) {
+		super();
+		this.carName = carName;
+		this.carBrand = carBrand;
+	}
+
+	@Override
+	public String toString() {
+		return "Car [carName=" + carName + ", carBrand=" + carBrand + "]";
+	}
+	
+	
+}

@@ -1,0 +1,25 @@
+package verizon;
+
+public class a1b2c3 {
+public static void main(String[] args) {
+	// a1b2c3
+	// 012345
+	
+	String input = "a1b2c3";
+//	System.out.println(input.charAt(0));t
+//	System.out.println("==");
+	
+	for(int index=0;index<input.length();index++) {
+		if(index%2==1) {
+			String num=input.valueOf(index);
+			int numoftimes = Integer.parseInt(num);
+			String actualnum=input.valueOf(numoftimes);
+			int actualnumberoftimes = Integer.parseInt(actualnum);
+			System.out.println("index number "+numoftimes);
+			for(int i=1;i<=actualnumberoftimes;i++) {
+				System.out.println(input.charAt(index-1));
+			}
+		}
+	}
+}
+}

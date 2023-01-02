@@ -1,0 +1,19 @@
+package verizon;
+
+public class a1b2c3 {
+public static void main(String[] args) {
+	// a1b2c3
+	// 012345
+	
+	String input = "a1b2c3";
+	
+	for(int index=0;index<input.length();index++) {
+		if(index%2==1) {
+			int num=index;
+			for(int i=1;i<=num;i++) {
+				System.out.println(input.charAt(index-1));
+			}
+		}
+	}
+}
+}

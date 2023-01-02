@@ -1,0 +1,46 @@
+package test;
+
+public class evenoddarray {
+public static void main(String[] args) {
+	int[] arr =  new int[] {1,2,3,4,5,6,7,8,9};
+	
+	int[] evenarray = new int[arr.length/2];
+	int[] oddarray = new int[arr.length/2];
+	
+	
+	int i=0;
+	for(int ref:arr) {
+		while(i<arr.length) {
+			//i=i+1;
+		if(ref%2==1) {
+			oddarray[i]=ref;
+			
+		}
+		}
+		i=i+1;	
+	}
+	
+	int j=0;
+	for(int ref:arr) {
+		while(j<arr.length) {
+		j=j+1;
+		if(ref%2==0) {
+			evenarray[j]=ref;
+		}
+		}
+	}
+	
+	
+	System.out.println("even array  ");
+	for(int k=0;k<evenarray.length;k++) {
+	
+		System.out.println(evenarray[k]);
+	}
+	
+	
+	System.out.println("odd array  ");
+	for(int m=0;m<oddarray.length;m++) {
+		System.out.println(oddarray[m]);
+	}
+}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;madhavEnacapsulation&apos; to &apos;madhavException/src&apos;&#x0D;&#x0A;- Original project: &apos;madhavEnacapsulation&apos;&#x0D;&#x0A;- Destination element: &apos;madhavException/src&apos;&#x0D;&#x0A;- Original element: &apos;madhavEnacapsulation/src/madhavEnacapsulation&apos;" description="Copy package" destination="=madhavException/src" element1="/src&lt;madhavEnacapsulation" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1667226235354" version="1.0"/>
+</session>
